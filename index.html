@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gojo Quotes</title>
+    <style>
+        body { 
+            background: #0a0a0a; 
+            color: #e0e0e0; 
+            text-align: center; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container { border: 1px solid #333; padding: 40px; border-radius: 15px; background: #111; margin: auto; max-width: 500px; }
+        h1 { color: #5d5dff; font-size: 1.5rem; }
+        #quote { font-style: italic; font-size: 1.2rem; min-height: 60px; margin: 20px 0; }
+        button { 
+            padding: 12px 25px; 
+            cursor: pointer; 
+            background: #5d5dff; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover { background: #4a4aff; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Infinity in a Click</h1>
+        <p id="quote">"Throughout Heaven and Earth, I alone am the honored one."</p>
+        <button onclick="newQuote()">Next Lesson</button>
+    </div>
+
+    <script>
+        const quotes = [
+            '"My soul denies it."',
+            '"It’ll be fine. I’m the strongest there is, after all."',
+            '"Searching for someone to blame is just a pain."',
+            '"Domain Expansion: Infinite Void."',
+            '"You’re a challenger here. I’m the one who provides the trial."',
+            '"Love is the most twisted curse of all."'
+        ];
+        function newQuote() {
+            const random = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quote').innerText = random;
+        }
+    </script>
+</body>
+</html>
